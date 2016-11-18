@@ -4,15 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { MaterialModule } from '@angular/material';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { TrainingChartComponent } from './training-chart/training-chart.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TrainingChartComponent
   ],
   imports: [
+    [MaterialModule.forRoot()],
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

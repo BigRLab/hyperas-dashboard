@@ -1,3 +1,33 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="primary">
+  <span>{{title}}</span>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+
+  <!--
+  <span>Right Aligned Text</span>
+  -->
+</md-toolbar>
+
+<div class="app-content">
+  <md-card class="card-main">
+    <md-card-subtitle>Training Progress</md-card-subtitle>
+    <md-card-title>k2001</md-card-title>
+    <md-card-content><app-training-chart></app-training-chart></md-card-content>
+
+  </md-card>
+  <md-card class="card-main">
+    <md-card-title>Todo</md-card-title>
+    <md-card-content>
+      <ul class="check-box-list">
+        <li *ngFor="let todo of todos">
+          <md-checkbox [checked]="todo.completed"
+                       (change)="todo.completed = $event">
+            {{todo.name}}
+          </md-checkbox>
+        </li>
+      </ul>
+    </md-card-content>
+
+  </md-card>
+</div>

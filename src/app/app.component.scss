@@ -1,0 +1,17 @@
+.app-content {
+  padding: 20px;
+}
+
+.card-main {
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.check-box-list {
+  padding-left: 1em;
+  & > li {
+    list-style-type: none;
+  }
+}
